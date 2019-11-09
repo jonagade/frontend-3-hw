@@ -1,9 +1,9 @@
-export const like = (movies) => ({
+export const like = (movie) => ({
     type: 'like',
-    movies,
+    movie,
 });
 
-export const dislike = (movies) => ({
+export const dislike = (movie) => ({
     type: 'dislike',
-    movies,
+    movie,
 });

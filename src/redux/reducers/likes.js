@@ -6,7 +6,7 @@ export const likes = (state = initialStateOfLikes, action) => {
     switch (action.type) {
         case 'like':
             // pridedam naują palaikintą filmą
-            const addedLikedMovies = [...state.likedMovies, action.movies];
+            const addedLikedMovies = [...state.likedMovies, action.movie];
             return {
                 ...state,
                 likedMovies: addedLikedMovies,
@@ -14,7 +14,7 @@ export const likes = (state = initialStateOfLikes, action) => {
         case 'dislike':
             const likedMovies = [...state.likedMovies];
             // išimam dislikintą filmą
-            likedMovies.splice(state.likedMovies.indexOf(action.movies), 1);
+            likedMovies.splice(state.likedMovies.indexOf(action.movie), 1);
             return {
                 ...state,
                 likedMovies,
